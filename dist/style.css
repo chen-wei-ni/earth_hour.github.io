@@ -1,0 +1,1855 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap");
+*, *:before, *:after {
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D2526;
+}
+
+.scene {
+  width: 800px;
+  height: 450px;
+  border-radius: 5px;
+  background: linear-gradient(#046875, #4995AA);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.scene .moon {
+  position: absolute;
+  left: 606px;
+  top: 60px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  box-shadow: inset -15px -15px rgba(255, 230, 125, 0.9);
+}
+
+.centerPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+  z-index: 3;
+}
+.centerPart .text {
+  color: #fff;
+  text-align: center;
+}
+.centerPart .text h2 {
+  margin: 0;
+  letter-spacing: 5px;
+  font-family: "Assistant", "sans-serif";
+  font-size: 28pt;
+}
+.centerPart .text h5 {
+  margin: 2px;
+  letter-spacing: 3px;
+  opacity: 0.8;
+}
+.centerPart .switch {
+  width: 48px;
+  height: 63px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: inset -3px -5px #D8D8D8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.centerPart .switch .buttonOn {
+  width: 22px;
+  height: 30px;
+  border-radius: 0;
+  background-color: #D8D8D8;
+}
+.centerPart .switch .buttonOn .shadow {
+  width: 22px;
+  height: 4px;
+  border-radius: 0;
+  background-color: #A3A3A3;
+  position: absolute;
+  bottom: 0;
+}
+
+#active {
+  display: none;
+}
+
+#active:checked + .scene [class^=window] {
+  background-color: #03181C;
+}
+#active:checked + .scene .shadow {
+  display: none;
+}
+
+.allStars {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.allStars [class^=star] {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-animation: shine 3s infinite;
+          animation: shine 3s infinite;
+}
+@-webkit-keyframes shine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.allStars .star1 {
+  position: absolute;
+  left: 36.280212342%;
+  top: 56.539840381%;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+.allStars .star2 {
+  position: absolute;
+  left: 58.7693189262%;
+  top: -7.2878892019%;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+.allStars .star3 {
+  position: absolute;
+  left: 94.6698636607%;
+  top: 35.9433075476%;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+.allStars .star4 {
+  position: absolute;
+  left: 61.4959001083%;
+  top: 31.0869159538%;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+.allStars .star5 {
+  position: absolute;
+  left: 42.8809041192%;
+  top: 56.6627390906%;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+.allStars .star6 {
+  position: absolute;
+  left: 90.5948583681%;
+  top: 37.0362474053%;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+.allStars .star7 {
+  position: absolute;
+  left: 77.7483472505%;
+  top: 28.0227706314%;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+.allStars .star8 {
+  position: absolute;
+  left: 93.494256252%;
+  top: -0.3894913642%;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+.allStars .star9 {
+  position: absolute;
+  left: 89.3119484167%;
+  top: 15.1485905582%;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+.allStars .star10 {
+  position: absolute;
+  left: 47.9903031719%;
+  top: -4.4477487502%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+.allStars .star11 {
+  position: absolute;
+  left: 17.9966037022%;
+  top: -0.4758737176%;
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+}
+.allStars .star12 {
+  position: absolute;
+  left: 25.2499947716%;
+  top: 35.2825900482%;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.allStars .star13 {
+  position: absolute;
+  left: 73.2728198773%;
+  top: 26.8084355339%;
+  -webkit-animation-delay: -1.3s;
+          animation-delay: -1.3s;
+}
+.allStars .star14 {
+  position: absolute;
+  left: 62.2933184814%;
+  top: 23.948461184%;
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
+}
+.allStars .star15 {
+  position: absolute;
+  left: 42.942035275%;
+  top: 29.1793838353%;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+.allStars .star16 {
+  position: absolute;
+  left: 96.2931090603%;
+  top: 10.0585031865%;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+}
+.allStars .star17 {
+  position: absolute;
+  left: 27.3867280157%;
+  top: 40.4484623746%;
+  -webkit-animation-delay: -1.7s;
+          animation-delay: -1.7s;
+}
+.allStars .star18 {
+  position: absolute;
+  left: 29.8907602033%;
+  top: 54.4030787695%;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
+}
+.allStars .star19 {
+  position: absolute;
+  left: 72.3756166121%;
+  top: 27.4054694254%;
+  -webkit-animation-delay: -1.9s;
+          animation-delay: -1.9s;
+}
+.allStars .star20 {
+  position: absolute;
+  left: 93.8126503965%;
+  top: 2.7692129299%;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+
+.city {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.city .bottomBlack {
+  width: 800px;
+  height: 64px;
+  border-radius: 0;
+  background-color: #03181C;
+}
+.city .darkBuildings {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.city .darkBuildings .house1 {
+  width: 76px;
+  height: 138px;
+  border-radius: 0;
+  margin-left: 20px;
+  background-color: #03181C;
+  position: absolute;
+  bottom: 0;
+}
+.city .darkBuildings .house1 .windowLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 5px;
+}
+.city .darkBuildings .house1 .windowLine [class^=window] {
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+  margin: 4.9px;
+}
+.city .darkBuildings .house1 .window1 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window2 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window3 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window4 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window5 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window6 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window7 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window8 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window9 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window10 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window11 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window12 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window13 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window14 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window15 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window16 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window17 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window18 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window19 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window20 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window21 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window22 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window23 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window24 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window25 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window26 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window27 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window28 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window29 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house1 .window30 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings:before {
+  content: "";
+  width: 28px;
+  height: 9px;
+  border-radius: 0;
+  background-color: #03181C;
+  position: absolute;
+  left: 68px;
+  top: -147px;
+}
+.city .darkBuildings .house2 {
+  width: 76px;
+  height: 201px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 110px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house2 [class^=window] {
+  background-color: #FFE67D;
+  margin: 13px auto;
+}
+.city .darkBuildings .house2 .windowThin {
+  width: 62px;
+  height: 2px;
+  border-radius: 0;
+}
+.city .darkBuildings .house2 .windowWide {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+}
+.city .darkBuildings .house2:before {
+  content: "";
+  width: 13px;
+  height: 7px;
+  border-radius: 0;
+  background-color: #03181C;
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+.city .darkBuildings .house3 {
+  width: 28px;
+  height: 88px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 190px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house4 {
+  width: 41px;
+  height: 201px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 218px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house4 .windowLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 3px;
+}
+.city .darkBuildings .house4 .windowLine [class^=window] {
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+  margin: 2.6px;
+}
+.city .darkBuildings .house4 .window1 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window2 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window3 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window4 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window5 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window6 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window7 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window8 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window9 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window10 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window11 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window12 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window13 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window14 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window15 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window16 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window17 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window18 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window19 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window20 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window21 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window22 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window23 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window24 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window25 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window26 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window27 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window28 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window29 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window30 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window31 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window32 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window33 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window34 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window35 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window36 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window37 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window38 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window39 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window40 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window41 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window42 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window43 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window44 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window45 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window46 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window47 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window48 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window49 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window50 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window51 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window52 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window53 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window54 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window55 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window56 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window57 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window58 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window59 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house4 .window60 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 {
+  width: 64px;
+  height: 124px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 276px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house5 .windowLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px 1px;
+}
+.city .darkBuildings .house5 .windowLine [class^=window] {
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+  margin: 3.5px;
+}
+.city .darkBuildings .house5 .windowLine .window1 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window2 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window3 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window4 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window5 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window6 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window7 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window8 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window9 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window10 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window11 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window12 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window13 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window14 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window15 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window16 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window17 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window18 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window19 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window20 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window21 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window22 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window23 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window24 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window25 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window26 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window27 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window28 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window29 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .windowLine .window30 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house5 .wall {
+  width: 22px;
+  height: 13px;
+  border-radius: 0;
+  position: absolute;
+  left: 42px;
+  top: -13px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house6 {
+  width: 45px;
+  height: 152px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 350px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house6 [class^=window] {
+  width: 31px;
+  height: 4px;
+  border-radius: 0;
+  margin: 10px auto;
+}
+.city .darkBuildings .house6 .windowLight {
+  background-color: #FFE67D;
+}
+.city .darkBuildings .house6 .windowDark {
+  background-color: #776C3E;
+}
+.city .darkBuildings .house6:before {
+  content: "";
+  border-style: solid;
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-width: 0 0px 8px 45px;
+  border-color: transparent transparent #03181C transparent;
+}
+.city .darkBuildings .house7 .bottom {
+  width: 112px;
+  height: 97px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 405px;
+  background-color: #03181C;
+  z-index: 2;
+}
+.city .darkBuildings .house7 .bottom .window1 {
+  background-color: #FFE67D;
+  width: 66px;
+  height: 4px;
+  border-radius: 0;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+}
+.city .darkBuildings .house7 .bottom .window2 {
+  background-color: #FFE67D;
+  width: 83px;
+  height: 4px;
+  border-radius: 0;
+  position: absolute;
+  left: 16px;
+  top: 22px;
+}
+.city .darkBuildings .house7 .top {
+  width: 62px;
+  height: 110px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 405px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house7 .top .wall {
+  width: 42px;
+  height: 6px;
+  border-radius: 0;
+  background-color: #03181C;
+  position: absolute;
+  left: 10px;
+  top: -6px;
+}
+.city .darkBuildings .house8 .top {
+  width: 28px;
+  height: 0;
+  border-top: 70px solid #03181C;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  position: absolute;
+  left: 520px;
+  top: -167px;
+}
+.city .darkBuildings .house8 .top .windowLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px 1px;
+  position: absolute;
+  left: 0;
+  top: -65px;
+}
+.city .darkBuildings .house8 .top .windowLine [class^=window] {
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+  margin: 3px 1.3px;
+}
+.city .darkBuildings .house8 .top .windowLine .window1 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window2 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window3 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window4 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window5 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window6 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window7 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window8 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window9 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window10 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window11 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window12 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window13 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window14 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window15 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window16 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window17 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window18 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window19 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .top .windowLine .window20 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .bottom {
+  width: 28px;
+  height: 0;
+  border-width: 0 8px 78px 8px;
+  border-style: none solid solid;
+  border-color: transparent transparent #03181C;
+  position: absolute;
+  left: 520px;
+  top: -100px;
+}
+.city .darkBuildings .house8 .lineThree {
+  position: absolute;
+  left: 522px;
+  top: -100px;
+}
+.city .darkBuildings .house8 .lineThree [class^=line] {
+  position: absolute;
+  bottom: 0;
+  left: initial;
+  background-color: #03181C;
+}
+.city .darkBuildings .house8 .lineThree .line1 {
+  margin-bottom: 35px;
+  width: 50px;
+  height: 3px;
+  border-radius: 0;
+  position: absolute;
+  left: -5px;
+  top: initial;
+}
+.city .darkBuildings .house8 .lineThree .line2 {
+  width: 40px;
+  height: 3px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .lineThree .line3 {
+  width: 40px;
+  height: 3px;
+  border-radius: 0;
+  margin-bottom: -10px;
+}
+.city .darkBuildings .house8 .wall {
+  position: absolute;
+  bottom: 166px;
+  left: 537px;
+  background-color: #03181C;
+  width: 9px;
+  height: 6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house8 .wall .stick {
+  width: 2px;
+  height: 12px;
+  border-radius: 0;
+  background-color: #03181C;
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translateX(-50%);
+}
+.city .darkBuildings .house9 .bottom {
+  width: 47px;
+  height: 134px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 580px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house9 .bottom [class^=window] {
+  width: 30px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin: 8px auto;
+}
+.city .darkBuildings .house9 .bottom:before {
+  content: "";
+  width: 3px;
+  height: 10px;
+  border-radius: 0;
+  background-color: #03181C;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+.city .darkBuildings .house9 .top {
+  width: 75px;
+  height: 95px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 580px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house9 .top [class^=window] {
+  width: 30px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin: 6px auto;
+}
+.city .darkBuildings .house9 .top .window1 {
+  width: 49px;
+  height: 2px;
+  border-radius: 0;
+  margin-left: 9px;
+}
+.city .darkBuildings .house9 .top .window2 {
+  width: 40px;
+  height: 2px;
+  border-radius: 0;
+  margin-left: 26px;
+}
+.city .darkBuildings .house9 .top .window3 {
+  width: 55px;
+  height: 2px;
+  border-radius: 0;
+  margin-left: 9px;
+}
+.city .darkBuildings .house10 .left {
+  width: 41px;
+  height: 152px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 660px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house10 .left .windowLine {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3px;
+}
+.city .darkBuildings .house10 .left .windowLine [class^=window] {
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+  margin: 2.7px;
+}
+.city .darkBuildings .house10 .left .windowLine .window1 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window2 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window3 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window4 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window5 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window6 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window7 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window8 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window9 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window10 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window11 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window12 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window13 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window14 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window15 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window16 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window17 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window18 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window19 {
+  background-color: #03181C;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window20 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window21 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window22 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window23 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window24 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window25 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window26 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window27 {
+  background-color: #776C3E;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window28 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window29 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .left .windowLine .window30 {
+  background-color: #FFE67D;
+  width: 2.7px;
+  height: 3.6px;
+  border-radius: 0;
+}
+.city .darkBuildings .house10 .right {
+  width: 18px;
+  height: 91px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 701px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house10 .right .window1 {
+  width: 3.5px;
+  height: 3.6px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin: 8px 0px;
+}
+.city .darkBuildings .house10 .right .window2 {
+  width: 3.5px;
+  height: 3.6px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin: -12px 8px;
+}
+.city .darkBuildings .house11 {
+  width: 69px;
+  height: 125px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  left: 735px;
+  background-color: #03181C;
+}
+.city .darkBuildings .house11 .double {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+.city .darkBuildings .house11 .double .window {
+  width: 6px;
+  height: 8px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin-left: 2px;
+}
+.city .darkBuildings .house11 .double2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+.city .darkBuildings .house11 .double2 .window {
+  width: 6px;
+  height: 8px;
+  border-radius: 0;
+  background-color: #FFE67D;
+  margin-left: 2px;
+}
+
+.lightBuildings .house1 {
+  width: 80px;
+  height: 130px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+.lightBuildings .house2 {
+  width: 77px;
+  height: 77px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 85px;
+  top: 120px;
+}
+.lightBuildings .house3 {
+  width: 80px;
+  height: 150px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 170px;
+  top: 100px;
+}
+.lightBuildings .house4 {
+  width: 40px;
+  height: 100px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 250px;
+  top: 120px;
+}
+.lightBuildings .house5 {
+  width: 100px;
+  height: 210px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 310px;
+  top: 80px;
+}
+.lightBuildings .house5:before {
+  content: "";
+  top: -69px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border: 58px solid;
+  border-color: transparent transparent #064959 transparent;
+}
+.lightBuildings .house6 {
+  width: 50px;
+  height: 250px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 420px;
+  top: 50px;
+}
+.lightBuildings .house7 {
+  width: 80px;
+  height: 150px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 470px;
+  top: 100px;
+}
+.lightBuildings .house8 {
+  width: 30px;
+  height: 80px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 550px;
+  top: 120px;
+}
+.lightBuildings .house9 {
+  width: 60px;
+  height: 170px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 570px;
+  top: 80px;
+}
+.lightBuildings .house10 {
+  width: 40px;
+  height: 70px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 630px;
+  top: 140px;
+}
+.lightBuildings .house11 {
+  width: 50px;
+  height: 70px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 670px;
+  top: 110px;
+}
+.lightBuildings .house12 {
+  width: 50px;
+  height: 90px;
+  border-radius: 0;
+  background-color: #064959;
+  position: absolute;
+  left: 720px;
+  top: 120px;
+}
